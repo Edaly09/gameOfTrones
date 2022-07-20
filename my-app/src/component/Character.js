@@ -9,11 +9,12 @@ class Character extends React.Component {
 				{this.props.title}
 			 </h1>
 			<p>
-				{this.props.name}
+				{this.props.name} {this.props.last}
+
 			</p>
-           <img>
-		       {this.props.img}
-		   </img>			
+			
+        <p>{this.props.titi}</p>
+
         </>   
 		
 		)

@@ -23,14 +23,18 @@ render() {
   return(
       <>
       <Character title="Game of thrones"/>
-      <Character img={this.state.imageUrl}/> 
+      <Character name={this.state.fullName}/>
+      <Character image={this.state.imageUrl}/>
 
      {this.state.characters.map((Character)=>(
-       <>
-       <p>{Character.firstName} {Character.lastName}</p> 
+      
+       <p>
+        {Character.firstName} {Character.lastName}
+       
+       </p> 
 
-     </>
-     
+  
+   
      ))}
 
     </>
