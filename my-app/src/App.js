@@ -1,6 +1,5 @@
-import { wait } from '@testing-library/user-event/dist/utils'
 import React from 'react'
-import Chararater from './component/Character'
+import Character from './component/Character'
 
 class App extends React.Component {
   constructor(){
@@ -18,13 +17,22 @@ class App extends React.Component {
  this.setState({
   characters: result
 })
-console.log(this.state)
- }
-	render() {
-		return(
+}
+render() {
+  console.log(this.state) 
+  return(
       <>
-			<h1>Game of thrones </h1>
-     <p>{this.props.content} </p>
+      <Character title="Game of thrones"/>
+      <Character img={this.state.imageUrl}/> 
+
+     {this.state.characters.map((Character)=>(
+       <>
+       <p>{Character.firstName} {Character.lastName}</p> 
+
+     </>
+     
+     ))}
+
     </>
 		)
 	}
